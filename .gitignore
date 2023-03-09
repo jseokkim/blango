@@ -1,0 +1,17 @@
+# Django #
+*.log
+*.pot
+*.pyc
+media
+#db.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Mac OS
+.DS_Store
+._*
+
+# Backup files # 
+*.bak 
