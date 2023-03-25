@@ -69,6 +69,7 @@ class Dev(Configuration):
         "allauth.socialaccount", 
         "allauth.socialaccount.providers.google", 
         "rest_framework", 
+        "rest_framework.authtoken", 
     ]
 
     MIDDLEWARE = [
@@ -218,6 +219,14 @@ class Dev(Configuration):
 
     # Allowed to use DjDT
     INTERNAL_IPS = ["192.168.11.179"]
+
+    REST_FRAMEWORK = {
+        "DEFAULT_AUTHENTICATION_CLASSES": [
+            "rest_framework.authentication.BasicAuthentication",
+            "rest_framework.authentication.SessionAuthentication",
+            "rest_framework.authentication.TokenAuthentication",
+        ]
+    }
 
 
 class Prod(Dev):
